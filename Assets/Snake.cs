@@ -36,6 +36,20 @@ public class Snake : MonoBehaviour
             else if(Input.GetKeyDown(KeyCode.D))
                 direction = Vector2.right; 
         }
+
+                if(direction.x != 0.0f) { 
+            if(Input.GetKeyDown(KeyCode.UpArrow)) 
+                direction = Vector2.up;
+            else if(Input.GetKeyDown(KeyCode.DownArrow))
+                direction = Vector2.down; 
+        }
+        
+        if(direction.y != 0.0f) { 
+            if(Input.GetKeyDown(KeyCode.LeftArrow))
+                direction = Vector2.left; 
+            else if(Input.GetKeyDown(KeyCode.RightArrow))
+                direction = Vector2.right;  
+        }
     }
 
     private void FixedUpdate() 
